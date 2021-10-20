@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style/style.css">
+  <style> 
+    div{
+text-align: center;   
+ }
+
+#win {
+  background-color: red;
+  position: relative;
+  animation-name: win;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes win {
+  0%   {background-color:red;}
+  25%  {background-color:yellow;}
+  50%  {background-color:rgba(54, 105, 247, 0.397);}
+  75%  {background-color:green;}
+  100% {background-color:red;}
+}
+    </style>
+  <title>Number Guessing Game</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <h1 class="title">Guess the number</h1>
+      </div>
+    </div>
+    <div id="money" style="visibility:hidden;">
+      <div class="row" class="row justify-content-end">
+        <div class="col-8"></div>
+        <div class="col-4">
+          <p id="deposit">deposit</p>
+        </div>
+      </div>
+      <!-- <div class="row" class="row justify-content-end">
+        <div class="col-8"></div>
+        <div class="col-4">
+          <div class="row" id="win">win: </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <button id="start" type="button" class="btn btn-outline-dark btn-lg " onclick="game()">START THE GAME!</button>
+    </div>
+    <div class="col-4"></div>
+
+  </div>
+<div class="row justify-content-center">
+<p> Your guess:</p>
+</div>
+
+<!-- numbers -->
+  <div class="row justify-content-center" id="numbers">
+    <br>
+    <button type="button" class=" num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class=" num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class="num  btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class="num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class="num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class=" num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class="num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class="num  btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class="num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class="num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class="num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled> $</button>
+    <button type="button" class="num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class="num  btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class="num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class="num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class=" num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class=" num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class="num  btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class="num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class="num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+    <button type="button" class="num btn btn-outline-warning btn-lg" onclick="guess(this.id)" disabled>$</button>
+  </div>
+
+  <!-- winning -->
+  <div class="row justify-content-center" id="win" style="visibility: hidden;">
+    <div class="col-12">
+      <p id="winnings" style="text-align: center;">test</p>
+    </div>
+  </div>
+
+
+  </div>
+  <script src="scripts/guessinggame.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
