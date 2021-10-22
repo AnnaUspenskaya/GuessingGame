@@ -21,7 +21,7 @@ function game() {
     buttons[0].disabled = false;
     deposit = prompt("How much are you depositing?");
     do {
-        
+
         if (isNaN(deposit)) {
             deposit = prompt("How much are you depositing? \n Only numbers");
         }
@@ -40,15 +40,6 @@ function game() {
 
     for (let i = 0; i <= 20; i++) {
 
-        // do {
-        //     n = Math.floor(Math.random() * (max - min + 1)) + min;
-        //     p = numbers.includes(n);
-        //     if(!p){
-        //       numbers.push(n);
-        //     }
-        //   }
-        //   while(p);
-
         do {
             ran = Math.floor(Math.random() * 100);
             check = nums.includes(ran);
@@ -60,17 +51,14 @@ function game() {
 
         let ids = nums[i];
         document.getElementsByClassName("num")[i].setAttribute("id", ids);
-        //document.getElementById(ids).innerHTML=nums[i];
         buttons[i].innerHTML = nums[i];
     }
 
 
     console.log("nums: " + nums);
     console.log("select: " + select);
-1`3`    
 }
 function guess(id) {
-    // do{
     if (id != nums[select]) {
         document.getElementById(id).style.background = "red";
         count++;
@@ -90,7 +78,7 @@ function guess(id) {
 
     }
 }
-//your winnings 
+//your winnings
 function winning() {
 
     switch (count) {
@@ -105,7 +93,7 @@ function winning() {
             break;
         case 4:
             win = deposit * 2.5;;
-        case 5: 
+        case 5:
             win = deposit * 2;
         case 6:
             win = deposit * 1.5;;
@@ -114,12 +102,9 @@ function winning() {
         default:
             win = deposit - (deposit / 20 * (count - 1));
     }
-    win=Math.round((win  * 100) / 100)             jkbnjp\grt;
+    win=Math.round((win  * 100) / 100);
     document.getElementById("win").style.visibility = "visible";
 
     document.getElementById("winnings").innerHTML = "Congratulation! You've guessed the number! <h3> Your Winnings $" + win + '</h3>';
     console.log("win: " + win);
 }
-
-
-
