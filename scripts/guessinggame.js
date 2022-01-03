@@ -54,17 +54,12 @@ function game() {
         buttons[i].innerHTML = nums[i];
     }
 
-
-    console.log("nums: " + nums);
-    console.log("select: " + select);
 }
 function guess(id) {
     if (id != nums[select]) {
         document.getElementById(id).style.background = "red";
         count++;
         document.getElementById(id).disabled = true;
-        console.log("no");
-        console.log("count: " + count);
     } else {
         document.getElementById(id).style.background = "green";
         count++;
@@ -73,11 +68,9 @@ function guess(id) {
 
         } winning();
 
-        console.log("yes");
-        console.log("count: " + count);
-
     }
 }
+
 //your winnings
 function winning() {
 
@@ -104,7 +97,6 @@ function winning() {
     }
     win=Math.round((win  * 100) / 100);
     document.getElementById("win").style.visibility = "visible";
-
     document.getElementById("winnings").innerHTML = "Congratulation! You've guessed the number! <h3> Your Winnings $" + win + '</h3>';
-    console.log("win: " + win);
+
 }
